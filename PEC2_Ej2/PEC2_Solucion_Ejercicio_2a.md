@@ -1,0 +1,5 @@
+# Ejercicio 2
+
+## Observa que se han creado funciones *handle* en el fichero controlador (```todo.controller.js```), las cuales son pasadas como parámetro. Esto es debido al problema con el cambio de contexto (```this```) que existe en JavaScript. Ahora mismo si no tienes muy claro que está sucediendo, revisa qué hacen las “fat-arrow” de ES6 sobre el objeto ```this```, y prueba a cambiar el código para comprender qué está sucediendo cuando se modifica la siguiente línea:<br><br>```this.view.bindAddTodo(this.handleAddTodo);```<br><br>Por esta:<br><br>```this.view.bindAddTodo(this.service.addTodo);```<br><br>Responde, en un documento texto en el directorio de entrega a la siguiente pregunta:<br><br>¿Por qué es el valor de this es undefined? 
+
+```this``` está determinado por cómo se invoca a la función. No puede ser establecida medainte una asignación en tiempo de ejecución, y puede ser diferente cada vez que la función es invocada.
